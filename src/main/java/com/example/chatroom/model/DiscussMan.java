@@ -21,15 +21,10 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("d_discuss_man")
-public class DiscussMan implements Serializable {
+public class DiscussMan extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * id,自增
-     */
-    @TableId(value = "man_id", type = IdType.AUTO)
-    private Integer manId;
 
     /**
      * 聊天室id
@@ -51,25 +46,6 @@ public class DiscussMan implements Serializable {
      */
     private Integer remind;
 
-    /**
-     * 状态 1.正常 2.禁言
-     */
-    private Integer status;
-
-    /**
-     * 创建时间
-     */
-    private LocalDateTime createDate;
-
-    /**
-     * 最后修改时间
-     */
-    private LocalDateTime updateDate;
-
-    /**
-     * 最后修改时间
-     */
-    private Integer deleted;
 
 
 }

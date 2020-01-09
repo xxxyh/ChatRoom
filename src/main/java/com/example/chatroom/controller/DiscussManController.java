@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-01-09
  */
 @RestController
-@RequestMapping("/test/discuss-man")
+@RequestMapping("/discuss_man")
 public class DiscussManController {
 
 }

@@ -21,15 +21,9 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("d_discuss_msg")
-public class DiscussMsg implements Serializable {
+public class DiscussMsg extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 聊天消息ID
-     */
-    @TableId(value = "msg_id", type = IdType.AUTO)
-    private Integer msgId;
 
     /**
      * 聊天室ID
@@ -47,29 +41,10 @@ public class DiscussMsg implements Serializable {
     private String msgContent;
 
     /**
-     * 创建时间
-     */
-    private LocalDateTime createDate;
-
-    /**
-     * 编辑时间
-     */
-    private LocalDateTime updateDate;
-
-    /**
      * 消息类型 0文本1图片2语音3视频4位置5文件
      */
     private Integer type;
 
-    /**
-     * 消息状态
-     */
-    private Integer status;
-
-    /**
-     * 删除：0未删除 1删除 
-     */
-    private Integer deleted;
 
 
 }
